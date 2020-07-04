@@ -52,7 +52,7 @@ public class PersonaController {
         return new ResponseEntity<Persona>(obj, HttpStatus.OK);
     }
 
-    @DeleteMapping("/{id]")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable("id") Integer id) throws Exception {
         Persona obj = service.listarPorId(id);
         if (obj.getIdPersona() == null) {

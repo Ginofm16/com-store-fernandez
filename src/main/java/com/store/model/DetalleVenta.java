@@ -1,5 +1,6 @@
 package com.store.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -18,6 +19,7 @@ public class DetalleVenta {
     @Column(name = "cantidad", nullable = false)
     private Integer cantidad;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "id_venta", nullable = false,
             foreignKey = @ForeignKey(name = "fk_detalle_venta"))
